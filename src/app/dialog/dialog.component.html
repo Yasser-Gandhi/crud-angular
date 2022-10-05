@@ -1,0 +1,68 @@
+  <h1 mat-dialog-title>Registra tu clase</h1>
+
+  <div mat-dialog-content>
+      <!-- FORMGROUP -->
+      <form [formGroup]="clasesForm">
+        <!-- TEMA -->
+        <mat-form-field appearance="outline">
+          <mat-label>Tema</mat-label>
+          <input formControlName="tema" matInput placeholder="Akkusativ">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <!-- NIVEL -->
+        <mat-form-field appearance="outline">
+          <mat-label>Nivel</mat-label>
+          <mat-select formControlName="nivel">
+            <mat-option value="Alemán 1">Alemán 1</mat-option>
+            <mat-option value="Alemán 2">Alemán 2</mat-option>
+            <mat-option value="Alemán 3">Alemán 3</mat-option>
+            <mat-option value="Alemán 4">Alemán 4</mat-option>
+            <mat-option value="Alemán 5">Alemán 5</mat-option>
+            <mat-option value="Alemán 6">Alemán 6</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- FECHA -->
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha</mat-label>
+          <input matInput formControlName="fecha" [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+        <!-- PLATAFORMA-->
+        <label for="">Plataforma</label>
+        <mat-radio-group formControlName="plataforma"aria-labelledby="example-radio-group-label" class="example-radio-group">
+          <mat-radio-button class="example-radio-button" *ngFor="let plataforma of plataformas" [value]="plataforma">
+            {{plataforma}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <!-- URL DEL RECURSO/PLATAFORMA-->
+        <mat-form-field appearance="outline">
+          <mat-label>URL</mat-label>
+          <input formControlName="url" matInput placeholder="URL">
+        </mat-form-field>
+
+        <!-- DESCRIPCION-->
+        <mat-form-field appearance="outline">
+          <mat-label>Descripción</mat-label>
+          <textarea formControlName="descripcion" matInput placeholder="Descripción"></textarea>
+        </mat-form-field>
+
+        <!-- PENDIENTES-->
+        <mat-form-field appearance="outline">
+          <mat-label>Pendientes</mat-label>
+          <textarea formControlName="pendientes" matInput placeholder="Pendientes"></textarea>
+        </mat-form-field>
+      </form>
+  </div>  <!-- FIN DE DIALOG CONTENT-->
+
+
+  <!-- BOTONES -->
+  <div mat-dialog-action [align]="'end'">
+      <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+      <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="agregarClase()">Guardar</button>
+  </div>
