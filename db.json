@@ -1,12 +1,7 @@
 {
   "listadoClases": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "tema": "Artikel",
+      "tema": "Artikel2",
       "nivel": "Alemán 1",
       "fecha": "2022-10-17T05:00:00.000Z",
       "plataforma": "Aula virtual",
@@ -14,16 +9,6 @@
       "descripcion": "Lorem",
       "pendientes": "Ipsum",
       "id": 7
-    },
-    {
-      "tema": "Personalpronomen",
-      "nivel": "Alemán 1",
-      "fecha": "2022-10-19T05:00:00.000Z",
-      "plataforma": "Aula virtual",
-      "url": "https://manz.dev/canal/",
-      "descripcion": "Pronomen",
-      "pendientes": "Ihr",
-      "id": 8
     },
     {
       "tema": "Las vocales",
@@ -34,6 +19,16 @@
       "descripcion": "Umlaut",
       "pendientes": "No se saben los adverbios",
       "id": 9
+    },
+    {
+      "tema": "Pronombres",
+      "nivel": "Alemán 3",
+      "fecha": "2022-11-03T06:00:00.000Z",
+      "plataforma": "Miro Board",
+      "url": "www.deutschland.de",
+      "descripcion": "Lorem",
+      "pendientes": "Ipsum",
+      "id": 10
     }
   ],
   "comments": [

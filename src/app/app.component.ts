@@ -58,6 +58,19 @@ export class AppComponent implements OnInit {
     });
   }
 
+  deleteLesson(row : any){
+    this.api.deleteLesson(row.id)
+    .subscribe({
+      next : (res) => {
+        alert ("Clase eliminada correctamente");
+        this.getAllLessons();
+      },
+      error : (err) => {
+        alert ("Error al eliminar la clase")
+      }
+    })
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
